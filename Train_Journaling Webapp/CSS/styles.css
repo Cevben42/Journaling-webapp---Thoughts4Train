@@ -1,0 +1,381 @@
+:root {
+    --theme-color: #43a046;
+    --light-theme: #e8f5e9;
+    --soft-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar Wrapper */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--theme-color);
+    color: white;
+}
+
+/* Group Logo + Menu Options Together */
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo stays as text placeholder */
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Navigation beside logo */
+.nav-left a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    position: relative;
+}
+
+.nav-left a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Right Icons */
+.nav-icons .icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    margin-left: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Train */
+.train-section {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #eaeaea;
+}
+
+.train-gif {
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Search Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: white;
+}
+
+.search-bar {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-btn, .add-entry-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--theme-color);
+    color: white;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Recent Section */
+.recent-entries {
+    flex: 2;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recent-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Left: Entry List */
+.recent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.entry-btn {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.entry-btn.active {
+    background: var(--light-theme);
+    border-color: var(--theme-color);
+    font-weight: bold;
+}
+
+/* Right: Entry View */
+.recent-text {
+    flex: 1;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Reward Section */
+.reward {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.reward-img {
+    width: 120px;
+    margin-top: 20px;
+}
+
+/* Entries Page Layout */
+.entries-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left panel — viewing area */
+.viewing-box {
+    flex: 2;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.entry-text-box {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    min-height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Right panel — entry list by month */
+.entry-list {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Month Sections */
+.month-btn {
+    width: 100%;
+    padding: 8px;
+    background: var(--light-theme);
+    border: 1px solid var(--theme-color);
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.month-entries {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.month-entries .entry-btn {
+    padding: 6px;
+    text-align: left;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.month-entries .entry-btn.active {
+    background: var(--light-theme);
+    border-color: var(--theme-color);
+    font-weight: bold;
+}
+
+/* Favorite Checkbox */
+.fav-check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+/* Viewing Box Header (Title + Favorite Checkbox) */
+.viewing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fav-check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.fav-check input {
+    transform: scale(1.1);
+}
+
+.personalize-page {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.custom-box {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 50%;
+    display: flex;
+    padding: 20px;
+}
+
+.preview-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-area img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.options-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.option button {
+    background: var(--theme-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Add Entry Page Styles */
+.add-entry-container {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.entry-box {
+    width: 70%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.entry-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.date-input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.entry-textarea {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.add-entry-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: var(--theme-color, #6c63ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.add-entry-btn:hover {
+    opacity: 0.8;
+}

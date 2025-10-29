@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entries</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="left-nav">
+            <div class="logo">LOGO</div>
+            <nav class="nav-left">
+                <a href="#">Home</a>
+                <a href="#" class="active">Entry</a>
+                <a href="#">Personalize</a>
+            </nav>
+        </div>
+        <div class="nav-icons">
+            <button class="icon-btn">＋</button>
+            <button class="icon-btn">💬</button>
+            <button class="icon-btn">👤</button>
+        </div>
+    </header>
+
+    <!-- SEARCH / FILTER AREA -->
+    <section class="controls">
+        <input type="text" placeholder="Search..." class="search-bar">
+        <button class="filter-btn">Filter</button>
+        <button class="filter-btn">+ Add Entry</button>
+    </section>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="entries-content">
+        <!-- LEFT SIDE: VIEWING AREA -->
+        <section class="viewing-box">
+            <div class="viewing-header">
+                <h2>Viewing...</h2>
+                <label class="fav-check">
+                    <input type="checkbox"> ⭐ Favorite
+                </label>
+            </div>
+            
+            <div class="entry-text-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+            </div>
+        </section>
+
+        <!-- RIGHT SIDE: ENTRY LIST -->
+        <section class="entry-list">
+            <h2>Entries</h2>
+
+            <div class="month-block">
+                <button class="month-btn">▶ October 2025</button>
+                <div class="month-entries">
+                    <button class="entry-btn">October 25</button>
+                    <button class="entry-btn">October 24</button>
+                    <button class="entry-btn">October 23</button>
+                </div>
+            </div>
+
+            <div class="month-block">
+                <button class="month-btn">▶ November 2025</button>
+                <div class="month-entries">
+                    <button class="entry-btn">November 12</button>
+                    <button class="entry-btn">November 08</button>
+                </div>
+            </div>
+
+            <div class="month-block">
+                <button class="month-btn">▶ December 2025</button>
+                <div class="month-entries">
+                    <button class="entry-btn">December 5</button>
+                </div>
+            </div>
+
+            <div class="month-block">
+                <button class="month-btn">▶ January 2026</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
